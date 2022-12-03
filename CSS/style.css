@@ -13,27 +13,6 @@ main{
 body{
     background: #f2f2f276;
 }
-/* .left-screen{
-    flex-grow:3.1;
-    flex-shrink:1;
-    background-color: #ffffff;
-}
-
-.mid-screen{
-    flex-grow:1.8;
-    flex-shrink:1;
-}
-.right-screen{
-    flex-grow:2.9;
-    flex-shrink:1;
-    border: 1px solid green;
-    
-}
-.mid-screen .container{
-    display: flex;
-    flex-direction: column;
-   align-items:flex-end;
-} */
 .left-screen .contents{
     margin-left: 25px;
 }
@@ -86,8 +65,6 @@ body{
 /* MID SECTION */
 .mid-screen{
     width: 610px;
-    /* border:1px solid rgba(17, 17, 18, 0.121); */
-    /* position: relative; */
 }
 .mid-screen .container{
     width: 100%;
@@ -102,9 +79,6 @@ body{
     display: block;
     object-fit:cover;
     clip-path: circle(42%);
-    /* border-radius: 50%; */
-    /* outline-width: 31px; */
-    /* border: 2px solid blue; */
 }
 .mid-screen header{
     overflow-x:auto;
@@ -131,7 +105,6 @@ body{
     width: 150%;
 }
 .mid-screen .status div{
-    /* display: grid; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -267,6 +240,81 @@ body{
 }
 .comment-section,.comment-section div{
     align-items: flex-end;
+}
+/* CAROUSEL SECTION */
+.carousel-wrapper{
+    display: block;
+    margin: 0 auto;
+    height: 470px;
+    position: relative;
+    width: 470px;
+    /* border: 2px solid black; */
+}
+.carousel-item{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+}
+
+.arrow{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 12px;
+}
+.arrow-circle{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: black;
+    z-index: 1000;
+}
+.arrow-prev{
+    left:20px;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%)rotate(135deg);
+}
+
+
+.arrow-next{
+    right: 20px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%)rotate(-45deg);
+}
+[id^= "item"]{
+    display: none;
+}
+.item-1{
+    z-index: 2;
+    opacity: 1;
+    background: url('/images/feed/kim\ k\ 2.jpg');
+    background-size: cover;
+}
+.item-2{
+    background: url('/images/feed/kim-k.jpg');
+    background-size: cover;
+}
+.item-3{
+    background: url('/images/feed/Safeimagekit\ \(3\).png');
+    background-size: cover;
+}
+*:target ~ .item-1{
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1{
+opacity:1;
+}
+#item-2:target ~ .item-2,#item-3:target ~ .item-3{
+    opacity:1;
+    z-index: 3;
 }
 
 /* RIGHT SCREEN */
