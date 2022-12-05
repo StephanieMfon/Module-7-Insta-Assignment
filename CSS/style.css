@@ -13,11 +13,7 @@ main{
 body{
     background: #f2f2f276;
 }
-/* .left-screen .contents{
-    margin-left: 25px;
-} */
  .left-screen .container{
-    /* position:fixed; */
     width:100%;
     z-index: 999;
 }
@@ -49,9 +45,9 @@ body{
 }
 
  .left-screen .bottom div,.left-screen  .middle div{
-    margin-bottom: 18px;
+    margin-bottom: 14px;
      width :115px; 
-    padding:12px 90px 12px 12px;
+    padding:14px 90px 14px 12px;
     transition: background;
     transition-delay: 0.1s;
     border-radius: 30px;
@@ -68,18 +64,18 @@ body{
 .left-screen .bottom div:hover .nav-img{
     transform: scale(1.09);
 }
+.left-screen .bottom #bottom-menu{
+    margin: 37px 0 50px 12px;
+}
+.left-screen .bottom #bottom-menu:hover{
+    background: #f2f2f2;
+    border-radius: 30px;
+}
 .left-screen .top{
     margin: 44px 0 0 24px;
 }
 .left-screen .middle{
     margin: 30px 0 0 12px;
-}
-.left-screen .bottom #bottom-menu{
-    margin: 45px 0 50px 12px;
-}
-.left-screen .bottom #bottom-menu:hover{
-    background: #f2f2f2;
-    border-radius: 30px;
 }
 .left-screen  .middle div a,
 .left-screen .bottom div a{
@@ -154,8 +150,7 @@ body{
     background:
      radial-gradient(rgba(0,0,0,0.15) 43%, transparent 0),
      radial-gradient(white 65%, transparent 0),
-     linear-gradient(to top right , rgb(255, 231, 46) 30%,deeppink 60%,purple);
-     
+     linear-gradient(to top right , rgb(255, 231, 46) 30%,deeppink 60%,purple);    
 }
 .mid-screen .status div p{
     font-size: 12px;
@@ -199,6 +194,8 @@ body{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .card .top div{
@@ -243,9 +240,11 @@ body{
 .comments span,.cards .caption span{
     font-weight: 500;
     color: #262626;
+    cursor: pointer;
 }
 .comment-section div p,.comments-title,.elipses span{
     color: rgba(18, 18, 17, 0.454);
+    cursor: pointer;
 }
 .content-time{
     color:rgba(18, 18, 17, 0.454);
@@ -361,6 +360,7 @@ opacity:1;
 .right-screen .container .top, .right-screen .top .profile{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .right-screen .top .profile{
@@ -423,6 +423,7 @@ opacity:1;
 }
 .suggestions-list-item {
     margin-bottom: 0.6rem;
+    cursor: pointer;
 }
 
 /* FOOTER SECTION */
@@ -436,6 +437,7 @@ opacity:1;
     width: 340px;
     font-size: 12px;
     margin: 32px 0px 20px;
+    cursor: pointer;
 }
 
 .footer-text{
