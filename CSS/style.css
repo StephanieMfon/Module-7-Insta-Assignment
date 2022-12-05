@@ -443,3 +443,10 @@ opacity:1;
 .footer-text{
     font-size:12px;
 }
+
+/* RESPONSIVE SECTION */
+
+img{
+    max-width: 100%;
+    display: block;
+}
