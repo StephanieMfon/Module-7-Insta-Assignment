@@ -13,12 +13,16 @@ main{
 body{
     background: #f2f2f276;
 }
-.left-screen .contents{
+/* .left-screen .contents{
     margin-left: 25px;
-}
-.left-screen .container{
-    position:fixed;
+} */
+ .left-screen .container{
+    /* position:fixed; */
     width:100%;
+    z-index: 999;
+}
+.left-screen .wrap .contents{
+    position: fixed;
 }
 .left-screen{
     width: 241px;
@@ -43,14 +47,39 @@ body{
     width: 22px;
     height: 22px;
 }
-.left-screen  .middle div{
-    margin-top: 43px;
+
+ .left-screen .bottom div,.left-screen  .middle div{
+    margin-bottom: 18px;
+     width :115px; 
+    padding:12px 90px 12px 12px;
+    transition: background;
+    transition-delay: 0.1s;
+    border-radius: 30px;
+    transition-timing-function: ease-in;
+    transition-duration: 0.3s;
+} 
+ .left-screen .middle div:hover{
+    background: #f2f2f290;
+    border-radius: 30px;
+} 
+.left-screen .middle div:hover .nav-img{
+    transform: scale(1.09);
+}
+.left-screen .bottom div:hover .nav-img{
+    transform: scale(1.09);
+}
+.left-screen .top{
+    margin: 44px 0 0 24px;
 }
 .left-screen .middle{
-    margin-top: 80px;
+    margin: 30px 0 0 12px;
 }
-.left-screen .bottom div{
-    margin-top: 65px;
+.left-screen .bottom #bottom-menu{
+    margin: 45px 0 50px 12px;
+}
+.left-screen .bottom #bottom-menu:hover{
+    background: #f2f2f2;
+    border-radius: 30px;
 }
 .left-screen  .middle div a,
 .left-screen .bottom div a{
@@ -61,7 +90,7 @@ body{
 }
 .home{
     font-weight: 500;
-}
+} 
 /* MID SECTION */
 .mid-screen{
     width: 610px;
@@ -72,6 +101,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items:  flex-end;
+    position: static;
 }
  .mid-screen .container header img{
     width: 100%;
@@ -91,7 +121,7 @@ body{
     height: 90px;
     position: relative;
     margin-top: 17px;
-    border-radius: 15px;
+    border-radius: 9px;
 }
 .mid-screen header::-webkit-scrollbar{
     display:none;
@@ -113,6 +143,7 @@ body{
     user-select:none;
     transition: all o.2s ease-in;
 }
+
 .mid-screen .status div:hover{
     transform:scale(1.04);
 }
@@ -132,7 +163,7 @@ body{
     margin-top: 3px;
 }
 .mid-screen .middle img{
-    width: 470px;
+    width: 466px;
     height: 470px;
 }
 
@@ -143,11 +174,10 @@ body{
 }
 .card{   
      border:1px solid rgba(17, 17, 18, 0.212);
-    border:1px solid rgba(17, 17, 18, 0.212);
-    border:1px solid rgba(17, 17, 18, 0.212);
-    border-radius: 15px;
+    border-radius: 7px;
     background: #ffffff;
     margin-bottom: 15px;
+    max-width: 466px;
 }
 
 [alt="more"]{
@@ -247,8 +277,7 @@ body{
     margin: 0 auto;
     height: 470px;
     position: relative;
-    width: 470px;
-    /* border: 2px solid black; */
+    width: 466px;
 }
 .carousel-item{
     position: absolute;
@@ -258,21 +287,28 @@ body{
     right:0;
     padding: 25px 50px;
     opacity: 0;
-    transition: all 0.1s ease-in;
 }
 
 .arrow{
-    border: solid white;
+    border: solid rgba(248, 248, 248, 0.994);
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 12px;
-}
-.arrow-circle{
-    width: 100px;
-    height: 100px;
     position: absolute;
-    background-color: black;
-    z-index: 1000;
+    z-index: 999;
+}
+.arrow:before{
+    
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 3em;
+        background:rgba(255, 255, 255, 0.515);
+        left: -0.9em;
+        top: -0.8em;
+        border-radius: 50%;
+        z-index: -1000;
+    
 }
 .arrow-prev{
     left:20px;
